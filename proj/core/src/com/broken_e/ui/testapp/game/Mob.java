@@ -2,7 +2,6 @@ package com.broken_e.ui.testapp.game;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.Batch;
-import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.scenes.scene2d.Action;
@@ -23,7 +22,7 @@ import com.broken_e.ui.testapp.game.MobRemoveEvent.MobTouchedEvent;
  */
 public class Mob extends Actor {
 
-	private final Sprite sprite = new Sprite();
+	private TextureRegion region;
 	private float speed;
 	private float accum;
 	private boolean isRemoving = false;
@@ -43,12 +42,11 @@ public class Mob extends Actor {
 
 	/** resets the mob instead of the constructor, for poolability */
 	public Mob init(TextureRegion region, float speed) {
-		//this.animation = anim;
+		this.region = region;
 		this.speed = speed;
 		accum = 0;
 		isRemoving = false;
-		sprite.setRegion(region);
-		setBounds(MathUtils.random(16f), MathUtils.random(12f), 1.4f, 1.2f);
+		setBounds(MathUtils.random(16f), MathUtils.random(12f), 1.4f, 1.4f);
 		setScale(1f);
 		setRotation(0f);
 		setOrigin(getWidth() * .5f, getHeight() * .5f);
@@ -113,13 +111,10 @@ public class Mob extends Actor {
 	@Override
 	public void draw(Batch batch, float parentAlpha) {
 		Color color = getColor();
-		if (sprite.isFlipX() != flip)
-			sprite.flip(true, false);
-		sprite.setColor(color.r, color.g, color.b, color.a * parentAlpha);
-		sprite.setScale(getScaleX(), getScaleY());
-		sprite.setRotation(getRotation());
-		sprite.setOrigin(getOriginX(), getOriginY());
-		sprite.setBounds(getX(), getY(), getWidth(), getHeight());
-		sprite.draw(batch);
+		batch.setColor(getColor());
+		if (region.isFlipX() != flip)
+		region.flip(true, false);
+		batch.draw(region, getX(), getY(), getOriginX(), getOriginY(), getWidth(), getHeight(), getScaleX(), getScaleY(), getRotation());
+		batch.setColor(color);
 	}
 }
