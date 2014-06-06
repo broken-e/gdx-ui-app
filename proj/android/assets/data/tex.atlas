@@ -1,0 +1,44 @@
+
+tex.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+face1
+  rotate: false
+  xy: 1, 4
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+patchThick
+  rotate: false
+  xy: 103, 6
+  size: 32, 32
+  split: 4, 4, 4, 4
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+patchThickDown
+  rotate: false
+  xy: 169, 72
+  size: 32, 32
+  split: 4, 4, 4, 4
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+white-pixel
+  rotate: false
+  xy: 1, 1
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+window1
+  rotate: false
+  xy: 103, 40
+  size: 64, 64
+  split: 6, 6, 6, 6
+  pad: 4, 4, 4, 4
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
