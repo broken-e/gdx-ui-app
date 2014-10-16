@@ -41,7 +41,7 @@ public class MainScreen extends BaseScreen {
 		mainTable.row();
 		mainTable.add(label("If you don't and one turns red,\nyou will get a strike.", Color.LIGHT_GRAY));
 		mainTable.row();
-		mainTable.add(label("5 strikes and you are out!", Color.RED));
+		mainTable.add(label("3 strikes and you are out!", Color.RED));
 	}
 
 	/** used to tidy up the label adding a bit for the how to play description */

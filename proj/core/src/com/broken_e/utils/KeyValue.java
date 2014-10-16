@@ -3,7 +3,7 @@ package com.broken_e.utils;
 import com.badlogic.gdx.utils.ObjectIntMap;
 
 /**
- * Used to be a bad implementation of a map. Now it's just extendign ObjectIntMap slightly.
+ * A small extension to ObjectIntMap.
  * 
  * @author trey miller
  * */

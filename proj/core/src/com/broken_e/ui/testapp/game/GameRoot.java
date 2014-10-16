@@ -60,7 +60,7 @@ public class GameRoot extends Group {
 						screen.pointsChanged(stats.getPoints());
 					} else if (event instanceof MobExplodeEvent) {
 						screen.mobExploded(stats.mobExploded());
-						if (stats.getStrikes() >= 5 && !gameOver)
+						if (stats.getStrikes() >= 3 && !gameOver)
 							gameOver();
 					}
 				}

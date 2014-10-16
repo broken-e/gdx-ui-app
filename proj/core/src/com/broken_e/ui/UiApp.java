@@ -47,8 +47,7 @@ public abstract class UiApp implements ApplicationListener {
 
 		stage = new Stage(new StretchViewport(w, h));
 		atlas = new TextureAtlas(atlasPath());
-		skin = new Skin();
-		skin.addRegions(atlas);
+		skin = new Skin(atlas);
 		String skinPath = skinPath();
 		if (skinPath != null)
 			skin.load(Gdx.files.internal(skinPath));
