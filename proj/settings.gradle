@@ -1,1 +1,2 @@
 include 'desktop', 'android', 'ios', 'html', 'core'
+rootProject.name = "gdx-ui-app-proj"

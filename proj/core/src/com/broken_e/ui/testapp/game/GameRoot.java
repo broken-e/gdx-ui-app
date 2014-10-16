@@ -46,7 +46,7 @@ public class GameRoot extends Group {
 
 	/** used because actors usually need to run the full constructor before adding things to them */
 	public GameRoot init() {
-		/** gameroot is 16 units wide and whatever units high, keeping aspect ratio. not too important.. */
+		/** gameroot is 16 units wide and whatever units high, keeping aspect ratio.  */
 		this.setSize(16, (screenH / screenW) * 16);
 		cam.setToOrtho(false, getWidth(), getHeight());
 		cam.update();
